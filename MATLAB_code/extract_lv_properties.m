@@ -1,10 +1,11 @@
-function test_lv
-% Function 
+function extract_lv_properties
+% Function scans through deidentified scans and writes data about the
+% detected lv to file
 
 % Variables
-data_dir = '../data/deidentified_scans';
-output_file_string = '../output/a.xlsx';
-output_image_folder = '../output/a';
+data_dir = '../data/test_data';
+output_file_string = '../output/lv_props.xlsx';
+output_image_folder = '../output/lv';
 
 
 % Code

@@ -32,7 +32,7 @@ im_stretched = imadjust(im_median_filtered);
 
 % Set up figure if requred
 if (~isempty(p.figure_working))
-    fig_rows = 3;
+    fig_rows = 2;
     fig_cols = 4;
     figure(p.figure_working);
     clf;

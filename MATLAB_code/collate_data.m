@@ -1,12 +1,11 @@
-function pull_data
+function collate_data
+% Function analyzes the end diastolic frame in each dcm and
+% stores the septal thickness data
 
 % Variables
-mri_data_folder = '../data/deidentified_scans';
-
+mri_data_folder = '../data/test_data';
 ed_frame_file = '../output/ed_frame.xlsx';
 ed_r_squared_threshold = 0.9;
-
-
 analysis_image_folder = '../output/analysis_images';
 output_file_string = '../output/wall_data.xlsx';
 

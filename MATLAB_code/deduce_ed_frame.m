@@ -1,9 +1,10 @@
 function deduce_ed_frame
+% Function analyses the lv_props data, fits a polynomial, and tries
+% to estimate the end-diastolic frame based on the largest lv volume
 
 % Variables
-dfs = '../data/manual_check/a.xlsx';
+dfs = '../output/lv_props.xlsx';
 p_order = 4;
-
 output_file_string = '../output/ed_frame.xlsx';
 
 % Code
@@ -34,6 +35,8 @@ for i = 1 : numel(uc)
     x_int = linspace(x(1), x(end), 100);
     y_int = interp1(x, py, x_int, 'spline');
     plot(x_int, y_int, 'r-');
+    xlabel('Frame number');
+    ylabel('LV area');
     
     r_squared = calculate_r_squared(y, py);
     
